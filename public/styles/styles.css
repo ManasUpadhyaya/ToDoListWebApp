@@ -1,0 +1,152 @@
+body {
+  font-family: 'Bevan', serif;
+    background-color: #EDF1D6;
+    margin: 0;
+    padding: 0;
+}
+.welcome{
+  font-size: 8rem;
+  margin: 10% auto;
+}
+.header-changes{
+    background-color: #9DC08B;
+    color: #40513B
+}
+
+
+.task-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    text-align: center;
+    border-radius: 30%;
+}
+h1{
+    margin-top: 1%;
+    text-align: center;
+    color: #3a4736;
+}
+h2,h4 {
+    color: #40513B;
+}
+
+p {
+    color: #517246;
+}
+
+label{
+    color: #517246;
+}
+
+.navbar-image {
+  width: 40px; /* Set the desired width for the image */
+  max-height: 100%; /* The image will maintain its aspect ratio based on the specified width */
+  display: inline-block; /* Allows for vertical alignment */
+  vertical-align: middle; /* Vertically align the image within the navbar */
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.add-button {
+    background-color: #40513B;
+    color: #EDF1D6;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 30%;
+}
+
+/* Style the checkbox */
+.completed-checkbox {
+    margin-top: 10px;
+}
+
+
+/* {box-sizing: border-box;} */
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+/* .open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+} */
+
+div{
+    text-align: center;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20%;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 20%;
+}
+
+/* Full-width input fields */
+.form-container input[type=text]{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #EDF1D6;
+  border-radius: 20%;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus{
+  background-color: #c7d3c1;
+  outline: none;
+  
+  
+  
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #40513B;
+  color: #EDF1D6;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 30%;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+
+.completed-task {
+    background-color:#609966;
+}
+
+.completed-text {
+    color: #EDF1D6; /* Change to the desired text color */
+}

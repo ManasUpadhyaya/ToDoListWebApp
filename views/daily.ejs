@@ -1,0 +1,53 @@
+<%- include("partials/header.ejs") %>
+<h1><%=heading%></h1>
+<% if (locals.data) { %>
+  
+  <% for (var i = 0; i < data.length; i++) { %>
+    <% const x = "Task"+ i %>
+    <div class="task-container" id = <%= x %>>
+      <h2><%= data[i].name %></h2>
+      <p><%= data[i].description %></p>
+      <p>Due Date: <%= data[i].dueDate %></p>
+      <!-- Replace select with a checkbox -->
+      <label for="completed">Completed:</label>
+      <input type="checkbox" id="completed" class="completed-checkbox" onclick="finished()">
+      <form action="/delete/<%=heading%>" method="POST">
+        <button class="btn btn-warning " style="background-color: rgb(221, 56, 56); border-radius: 30%; color: #EDF1D6;" name="id" value="<%= data[i]._id %>" type="submit">Delete</button>
+      </form>
+    </div>
+  <% } %>
+<% } %>
+
+<div>
+    <button class="add-button" onclick="openForm()">Add</button>
+</div>
+<div>
+  <form action="/deletelist/<%=heading%>" method="POST">
+    <button class="add-button btn btn-warning" style="background-color: rgb(221, 56, 56);" type="submit">Delete</button>
+  </form>
+
+</div>
+
+
+<!-- A button to open the popup form -->
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form action="/<%=heading%>" class="form-container" method="POST">
+    <h4>Enter The Task</h4>
+
+    <label for="task-name"><b>Task Name</b></label>
+    <input type="text" placeholder="Enter Task Name" name="task-name" required>
+
+    <label for="description"><b>Description</b></label>
+    <input type="text" placeholder="Description" name="description" required>
+    
+    <label for="due-date"><b>Due Date</b></label>
+    <input type="date" placeholder="Due Date" name="due-date" required>
+
+    <button type="submit" class="btn" onclick="closeForm()">Submit</button>
+  </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
+

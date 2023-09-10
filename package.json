@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0"
+  },
+  "name": "task-manager-project-2023",
+  "version": "1.0.0",
+  "description": "Project for managing tasks",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manas U",
+  "license": "ISC"
+}

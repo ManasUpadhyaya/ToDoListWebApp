@@ -1,0 +1,43 @@
+<script>
+    //Script logic
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+  
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+
+    // Get all elements with class "completed-checkbox"
+    const checkboxes = document.querySelectorAll('.completed-checkbox');
+
+    // Function to handle checkbox click event
+    function handleCheckboxClick(event) {
+        // Find the closest parent div with class "task-container"
+        const parentDiv = event.target.closest('.task-container');
+
+        // Toggle the background color and text color of the parent div and its children
+        if (parentDiv) {
+            parentDiv.classList.toggle('completed-task');
+            toggleTextColors(parentDiv);
+        }
+    }
+
+    // Function to toggle text colors within a parent div
+    function toggleTextColors(parentDiv) {
+        const childElements = parentDiv.querySelectorAll('*');
+        childElements.forEach(function (element) {
+            element.classList.toggle('completed-text');
+        });
+    }
+
+    // Attach the click event listener to all checkboxes
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', handleCheckboxClick);
+    });
+
+
+
+</script>
+
+</body>

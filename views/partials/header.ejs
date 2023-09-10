@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="header-changes navbar navbar-expand-lg">
+        <a href="/">
+
+            <img class="navbar-image" src="images/letter-m.png" alt="M">
+        </a>
+        <!-- <button type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+
+        </button> -->
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img src="images/menu.png" alt="" class="navbar-image" style="width: 20px;">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% for(let i = 0; i<task.length; i++){ %>
+            <a class="dropdown-item" href="/<%=task[i].name%>"><%=task[i].name%></a>
+            <% };%>
+        </div>
+
+        <form class="form-inline ml-auto" action="/addCategory" method="post">
+            <input class="form-control mr-sm-2" type="text" name="newCategory" placeholder="New Category" aria-label="New Category">
+            <button class="header-changes btn btn-outline my-2 my-sm-0" type="submit">Add</button>
+        </form>
+    </nav>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
