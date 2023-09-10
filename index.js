@@ -74,9 +74,7 @@ app.post("/:category", async (req, res) => {
       dueDate: req.body["due-date"],
       category: req.params.category,
     }
-    // START HERE
-    // add one more element to list but give extra parameter there as category
-    // Delete the current database created and make it again
+
     Tasks.insertMany([x]);
     const url = "/"+req.params.category;
     res.redirect(url);
